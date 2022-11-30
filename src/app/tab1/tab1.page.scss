@@ -1,0 +1,20 @@
+.dtab1{
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    }
+    
+    .dtab1 td, .dtab1 th{
+        border: 1px solid #ddd;
+        padding: 8px;
+    }
+    
+    .dtab1 tr:nth-child(even){background-color: #f2f2f2;}
+    .dtab1 tr:hover{background: #ddd;}
+    .dtab1 th{
+        padding-top: 12px;
+        padding-bottom:12px ;
+        text-align: left;
+        background-color: #1fe1ff;
+        color:white;
+    }

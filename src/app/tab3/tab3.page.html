@@ -1,10 +1,10 @@
-<ion-header [translucent]="true">
+<!-- <ion-header [translucent]="true"> 
   <ion-toolbar>
     <ion-title>
       Tab 3
     </ion-title>
   </ion-toolbar>
-</ion-header>
+</ion-header> -->
 
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
@@ -13,5 +13,15 @@
     </ion-toolbar>
   </ion-header>
 
-  <app-explore-container name="Tab 3 page"></app-explore-container>
+  <table class="dtab3">
+    <tr>
+     <!-- <th>No</th> -->
+      <th>Informasi</th>
+    </tr>
+    <tr *ngFor="let data of allData">
+      <!-- <th style="background-color: rgb(255, 255, 255); color:black; font-size: small;">{{data.kd_info}}</th> -->
+      <th style="background-color: rgb(255, 255, 255); color:black; font-size: small;">{{data.info}}</th>
+    </tr>
+
+  </table>
 </ion-content>

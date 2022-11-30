@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+// Import Add (before/after import please installation axios from cmd)
+import axios from 'axios';
 
 @Component({
   selector: 'app-tab2',
@@ -6,7 +9,18 @@ import { Component } from '@angular/core';
   styleUrls: ['tab2.page.scss']
 })
 export class Tab2Page {
-
-  constructor() {}
-
+  // Variabel GetData for array
+  public allData:any = [];
+  constructor() {
+        // Form Load GetData
+        this.GetData();
+  }
+  // Function GetData from API ---------------------------------------------------------------------------
+  async GetData(){
+    const res:any = await axios.get('http://localhost/api/get_data.php');
+ 
+    console.log(res.data);
+    this.allData = res.data.result;
+  }
+  // Function getData ---------------------------------------------------------------------------
 }
